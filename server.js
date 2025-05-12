@@ -49,6 +49,11 @@ app.get('/', (req, res) => {
   });
 });
 
+// Specific health check endpoint for Render
+app.get('/_health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 // Get all prediction markets
 app.get('/api/prediction-markets', (req, res) => {
   try {
