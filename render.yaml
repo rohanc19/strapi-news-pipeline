@@ -21,6 +21,10 @@ services:
         generateValue: true
       - key: API_TOKEN_SALT
         generateValue: true
+      - key: STRAPI_ADMIN_NO_BUILD
+        value: "false"
+      - key: NODE_OPTIONS
+        value: "--max-old-space-size=4096"
 
 databases:
   - name: strapi-news-pipeline-db
