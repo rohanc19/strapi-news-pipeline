@@ -1,0 +1,31 @@
+{
+  "name": "strapi-news-pipeline",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Strapi CMS for News Pipeline Prediction Markets",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/strapi": "4.15.5",
+    "@strapi/plugin-users-permissions": "4.15.5",
+    "@strapi/plugin-i18n": "4.15.5",
+    "better-sqlite3": "8.6.0",
+    "pg": "8.11.3",
+    "pg-connection-string": "2.6.2"
+  },
+  "author": {
+    "name": "Strapi team"
+  },
+  "strapi": {
+    "uuid": "strapi-news-pipeline"
+  },
+  "engines": {
+    "node": ">=16.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

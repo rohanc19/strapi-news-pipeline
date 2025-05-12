@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: strapi-news-pipeline
+    env: node
+    plan: free
+    buildCommand: yarn install && yarn build
+    startCommand: yarn start
+    healthCheckPath: /_health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: strapi-news-pipeline-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: APP_KEYS
+        generateValue: true
+      - key: API_TOKEN_SALT
+        generateValue: true
+
+databases:
+  - name: strapi-news-pipeline-db
+    plan: free
