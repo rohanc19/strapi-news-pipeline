@@ -3,7 +3,7 @@ services:
     name: strapi-news-pipeline
     env: node
     plan: free
-    buildCommand: yarn install && yarn build
+    buildCommand: chmod +x build.sh && ./build.sh
     startCommand: yarn start
     healthCheckPath: /_health
     envVars:
