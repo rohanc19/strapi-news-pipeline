@@ -1,49 +1,24 @@
 {
-  "name": "strapi-news-pipeline",
+  "name": "prediction-markets-api",
   "private": true,
   "version": "0.1.0",
-  "description": "Strapi CMS for News Pipeline Prediction Markets",
+  "description": "Simple API for Prediction Markets",
   "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
-    "@strapi/strapi": "4.15.5",
-    "@strapi/plugin-users-permissions": "4.15.5",
-    "@strapi/plugin-i18n": "4.15.5",
-    "better-sqlite3": "8.6.0",
-    "pg": "8.11.3",
-    "pg-connection-string": "2.6.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-router-dom": "5.3.4",
-    "styled-components": "5.3.11",
-    "@radix-ui/react-focus-guards": "1.0.0",
-    "@radix-ui/react-slot": "1.0.2",
-    "@radix-ui/react-use-callback-ref": "1.0.1",
-    "@radix-ui/react-use-controllable-state": "1.0.1",
-    "@radix-ui/react-context": "1.0.1",
-    "@radix-ui/react-collection": "1.0.3",
-    "@radix-ui/react-compose-refs": "1.0.1",
-    "@radix-ui/react-direction": "1.0.1",
-    "@radix-ui/react-dismissable-layer": "1.0.4",
-    "@radix-ui/react-id": "1.0.1",
-    "@radix-ui/react-portal": "1.0.3",
-    "@radix-ui/react-primitive": "1.0.3",
-    "@radix-ui/react-presence": "1.0.1",
-    "@radix-ui/react-use-layout-effect": "1.0.1"
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "pg-connection-string": "^2.6.2"
   },
-  "author": {
-    "name": "Strapi team"
-  },
-  "strapi": {
-    "uuid": "strapi-news-pipeline"
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   },
   "engines": {
-    "node": ">=16.0.0 <=20.x.x",
-    "npm": ">=6.0.0"
+    "node": ">=16.0.0"
   },
   "license": "MIT"
 }
